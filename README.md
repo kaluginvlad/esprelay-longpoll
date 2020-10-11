@@ -1,15 +1,15 @@
-ESP8266-longpoll project
-(c) Vladislav Kalugin, 2020
+#ESP8266-longpoll project
+##(c) Vladislav Kalugin, 2020
 
-Special for the Individual Project course 
-ГБОУ СОШ 1955 СП-1
+###Special for the Individual Project course 
+###ГБОУ СОШ 1955 СП-1
 
-Dependencies:
-    Python 3.5 (or higher):
+Dependencies
+    Python 3.5 (or higher)
         requests
         htmlmin
     
-    arduino-builder:
+    arduino-builder
         ESP8266 board
         ArduinoJson
     
