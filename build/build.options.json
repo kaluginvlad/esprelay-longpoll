@@ -1,5 +1,5 @@
 {
-  "additionalFiles": "..,..,..,..,../../..,../../..,../../..",
+  "additionalFiles": "..,..,..,../../..,../../..,../../..",
   "builtInLibrariesFolders": "",
   "builtInToolsFolders": "/home/vlk/soft/arduino-1.8.13/tools-builder,/home/vlk/.arduino15/packages",
   "compiler.optimization_flags": "",

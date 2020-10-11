@@ -12,19 +12,20 @@
  */
 # 8 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino"
 # 9 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino" 2
-//#include <WiFiClient.h>
+# 10 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino" 2
 # 11 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino" 2
 # 12 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino" 2
 # 13 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino" 2
 # 14 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino" 2
 # 15 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino" 2
-# 16 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino" 2
 
+# 17 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino" 2
 # 18 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino" 2
+# 19 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino" 2
 
 // Web pages
-# 21 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino" 2
 # 22 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino" 2
+# 23 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino" 2
 
 
 
@@ -53,14 +54,14 @@ void send_report() {
   // Create HTTP client
   HTTPClient report_http;
 
-  conf.configure(EEPROMReadString(4)); // Init configurator
+  StaticJsonDocument<256> conf = readWiFiConfig();
 
   StaticJsonDocument<500> report_doc;
   JsonObject root = report_doc.to<JsonObject>();
 
   root["dev_type"] = "esp_relay";
 
-  root["ssid"] = conf.ssid();
+  root["ssid"] = conf["ssid"];
   root["ip"] = WiFi.localIP().toString();
   root["mask"] = WiFi.subnetMask().toString();
   root["gw"] = WiFi.gatewayIP().toString();
@@ -99,9 +100,8 @@ void setup() {
   "                   /____/                                                   "
   );
 
-  Serial.println("\nESP8266-IOT CONFIGURATOR ver. 0.6 (c) Vladislav Kalugin, 02.10.2020");
-  Serial.print("ESP8266 IOT LONGPOLL RELAY. Build: ");
-  Serial.println("11.10.2020");
+  Serial.print("\nESP8266 IOT LONGPOLL RELAY. \nBuild: ");
+  Serial.println("12.10.2020");
 
   pinMode(D1, 0x01);
 
@@ -139,8 +139,8 @@ void setup() {
     web_srv.begin();
     Serial.println("Web configurator ready!");
   } else {
-     conf.configure(EEPROMReadString(4)); // Init configurator
-     lp_access_key = conf.secret_key();
+     StaticJsonDocument<256> iotconf = readWiFiConfig();
+     lp_access_key = iotconf["dkey"].as<String>();
 
      Serial.println("\n\n[SERVICE DATA]\nURL: "+lp_server+"\nFingerprint: "+lp_fp+"\nDevice key: "+lp_access_key+"\n");
      Serial.println("READY!\n");

@@ -6,7 +6,6 @@
  */
 
 #include <ESP8266WiFi.h>
-//#include <WiFiClient.h>
 #include <ESP8266WebServer.h>
 #include <ESP8266HTTPUpdateServer.h>
 #include <ESP8266HTTPClient.h>
@@ -14,13 +13,15 @@
 #include <ArduinoJson.h>
 #include <string.h>
 
+#include "EEPROM_tools.h"
+#include "config_tools.h"
 #include "WiFi_configurator.h"
 
 // Web pages
 #include "web_assets/c++/html_css.h"
 #include "web_assets/c++/html_root.h"
 
-#define BUILDDATE "11.10.2020"
+#define BUILDDATE "12.10.2020"
 
 bool config_ready;
 bool switch_state = false;
@@ -47,14 +48,14 @@ void send_report() {
   // Create HTTP client
   HTTPClient report_http;
 
-  conf.configure(EEPROMReadString(4)); // Init configurator
+  StaticJsonDocument<256> conf = readWiFiConfig();
   
   StaticJsonDocument<500> report_doc;
   JsonObject root = report_doc.to<JsonObject>();
 
   root["dev_type"] = "esp_relay";
   
-  root["ssid"] = conf.ssid();
+  root["ssid"] = conf["ssid"];
   root["ip"] = WiFi.localIP().toString();
   root["mask"] = WiFi.subnetMask().toString();
   root["gw"] = WiFi.gatewayIP().toString();
@@ -93,8 +94,7 @@ void setup() {
   "                   /____/                                                   "
   );
 
-  Serial.println("\nESP8266-IOT CONFIGURATOR ver. 0.6 (c) Vladislav Kalugin, 02.10.2020");
-  Serial.print("ESP8266 IOT LONGPOLL RELAY. \nBuild: ");
+  Serial.print("\nESP8266 IOT LONGPOLL RELAY. \nBuild: ");
   Serial.println(BUILDDATE);
 
   pinMode(RELAY_PIN, OUTPUT);
@@ -133,8 +133,8 @@ void setup() {
     web_srv.begin();
     Serial.println("Web configurator ready!");
   } else {
-     conf.configure(EEPROMReadString(4)); // Init configurator
-     lp_access_key = conf.secret_key();
+     StaticJsonDocument<256> iotconf = readWiFiConfig();
+     lp_access_key = iotconf["dkey"].as<String>();
     
      Serial.println("\n\n[SERVICE DATA]\nURL: "+lp_server+"\nFingerprint: "+lp_fp+"\nDevice key: "+lp_access_key+"\n");
      Serial.println("READY!\n");

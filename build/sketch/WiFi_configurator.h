@@ -5,15 +5,12 @@
  *
  * EEPROM ADDRESSES:
  * -- 0000 - 0003 - Checksum 
- * -- 0004 - **** - String data
- *
- * STRING CONFIG FORMAT:
- * [IS_CONFIGURED];[SSID];[PASS];[DOMAIN_NAME];[DEVICE_KEY]
+ * -- 0004 - **** - String data (JSON)
+ * 
  */
 
-#include "EEPROM_tools.h"
-#include "IOTConfig.h"
 #include <Ticker.h>
+#include <ArduinoJson.h>
 
 #include "web_assets/c++/html_config.h"
 
@@ -26,7 +23,7 @@ const int MAX_CONNECTION_TICKS = 100; // Amount of the WiFi ticks before connect
 #define LED_PIN 2                     // LED pin
 bool REVERSE_LED = true;              // Reverse led signal
 
-IOTConfig conf;
+#define CONF_JSON_BLANK "{\"stat\":0,\"ssid\":null,\"pass\":null,\"host\":null,\"dev_key\":null}"
 
 // Setup ticker for wifi connection checker
 Ticker wifi_update_ticker;
@@ -55,24 +52,11 @@ void checkWiFiFail() {
   }
 }
 
-// Updates config
-void updateWiFIConfig(String ssid, String passwd, String host, String secret_key) {
-  // Create config string
-  String newConfig = "1;" + ssid + ";" + passwd + ";" + host + ";" + secret_key;
-  // Write config to the EEPROM
-  EEPROMWriteString(4, newConfig);
-  // Update checksum
-  eeprom_crc_update();
-  Serial.println("New configuration applied! Rebooting...");
-  // Restart ESP8266
-  ESP.restart();
-}
-
 // Handle config webpage
 void HTTPhandleWiFiConf(ESP8266WebServer &web_srv) {
 
   // Configuration page
-  web_srv.on("/config", [&web_srv](){    
+  web_srv.on("/config", [&web_srv]() {
     web_srv.send(200, "text/html", html_config);
   });
 
@@ -91,6 +75,25 @@ void HTTPhandleWiFiConf(ESP8266WebServer &web_srv) {
     }
   });
 
+  // Check WiFi creds
+  web_srv.on("/api/wificheck", [&web_srv]() {
+    if (WiFi.status() == WL_CONNECTED) {
+      web_srv.send(200, "text/html", "already connected");
+      return;
+    }
+
+    WiFi.begin(web_srv.arg("SSID"), web_srv.arg("PASS"));
+    for (int i = 0; i < 100; i++) {
+      if (WiFi.status() == WL_CONNECTED) {
+        web_srv.send(200, "text/html", "success");
+        break;
+      }
+      delay(100);
+    }
+    web_srv.send(200, "text/html", "fail");
+
+  });
+
 }
 
 void led_toggle() {
@@ -107,21 +110,21 @@ bool WiFiConfigure(ESP8266WebServer &web_srv) {
   pinMode(LED_PIN, OUTPUT);
 
   // Verify EEPROM checksum
-  if ( EEPROMReadlong(0) == eeprom_crc()) {
+  if (EEPROMReadlong(0) == eeprom_crc()) {
     Serial.println("EEPROM Checksum - OK!");
     
-    conf.configure(EEPROMReadString(4)); // Init configurator
+    StaticJsonDocument<256> iotconf = readWiFiConfig();
 
-    if (conf.confStatus()) {
+    if (iotconf["stat"] == 1) {
       Serial.println("Config status - OK!");
       Serial.println("Setting up Wi-Fi...");
 
       // Set WiFi to the STATION (client) mode
       WiFi.mode(WIFI_STA);
       // Start WiFi connection
-      WiFi.begin(conf.ssid(), conf.pass());
+      WiFi.begin(iotconf["ssid"].as<String>(), iotconf["pass"].as<String>());
       // Set the hostname
-      WiFi.hostname(conf.host());
+      WiFi.hostname(iotconf["host"].as<String>());
       
     }
     else {
@@ -141,10 +144,11 @@ bool WiFiConfigure(ESP8266WebServer &web_srv) {
     // Clear EEPROM
     EEPROMClear();
     // Write empty config to a EEPROM
-    EEPROMWriteString(4, "0;NONE;NONE;NONE");
+    EEPROMWriteString(4, CONF_JSON_BLANK);
     // Update checksum
     eeprom_crc_update();
     Serial.println("WARNING!!!! Starting WiFi in AP mode!");
+      
     // Start blink
     led_blink_ticker.attach(0.1, led_toggle);
     startAP();

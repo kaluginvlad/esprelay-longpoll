@@ -10,6 +10,14 @@ SHELL := '/bin/bash'
 ESP_URL = 'http://esprelay.iot.minhinlocal'
 ESP_SER = '/dev/ttyUSB0' 
 
+all:
+	@echo "Building html..."
+	make -s html
+	@echo "Building sketch..."
+	make -s sketch
+	@echo "Uploading via OTA..."
+	make -s ota_upload
+
 html:
 	python3 web_assets/html2cpp.py
 
@@ -21,14 +29,6 @@ ota_upload:
 
 ser_upload:
 	esptool --port $(ESP_SER) write_flash 0x0000 build/esp8266_longpoll.ino.bin
-
-all:
-	echo "Building html..."
-	make html
-	echo "Building sketch..."
-	make sketch
-	echo "Uploading via OTA..."
-	make ota_upload
 
 clean:
 	rm -r build/*

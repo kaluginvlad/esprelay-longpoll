@@ -50,11 +50,6 @@
     "Includepath": null
   },
   {
-    "Sourcefile": "/home/vlk/Projects/esprelay-longpoll/build/sketch/IOTConfig.cpp",
-    "Include": "",
-    "Includepath": null
-  },
-  {
     "Sourcefile": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/libraries/ESP8266WiFi/src/BearSSLHelpers.cpp",
     "Include": "",
     "Includepath": null
