@@ -1,4 +1,4 @@
-/home/vlk/Projects/esp_lp_relay/build/libraries/ESP8266WiFi/CertStoreBearSSL.cpp.o: \
+/home/vlk/projects/esprelay-longpoll/build/libraries/ESP8266WiFi/CertStoreBearSSL.cpp.o: \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/libraries/ESP8266WiFi/src/CertStoreBearSSL.cpp \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/libraries/ESP8266WiFi/src/CertStoreBearSSL.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/Arduino.h \

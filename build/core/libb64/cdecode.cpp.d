@@ -1,4 +1,4 @@
-/home/vlk/Projects/esp_lp_relay/build/core/libb64/cdecode.cpp.o: \
+/home/vlk/projects/esprelay-longpoll/build/core/libb64/cdecode.cpp.o: \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/libb64/cdecode.cpp \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/pgmspace.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/sys/pgmspace.h \

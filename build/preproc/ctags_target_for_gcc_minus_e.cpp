@@ -1,4 +1,4 @@
-# 1 "/home/vlk/Projects/esp_lp_relay/esp8266_longpoll.ino"
+# 1 "/home/vlk/projects/esprelay-longpoll/esp8266_longpoll.ino"
 /* ESP8266 - IOT
 
  * 
@@ -10,21 +10,21 @@
  * Vladislav Kalugin (c) 2020
 
  */
-# 8 "/home/vlk/Projects/esp_lp_relay/esp8266_longpoll.ino"
-# 9 "/home/vlk/Projects/esp_lp_relay/esp8266_longpoll.ino" 2
+# 8 "/home/vlk/projects/esprelay-longpoll/esp8266_longpoll.ino"
+# 9 "/home/vlk/projects/esprelay-longpoll/esp8266_longpoll.ino" 2
 //#include <WiFiClient.h>
-# 11 "/home/vlk/Projects/esp_lp_relay/esp8266_longpoll.ino" 2
-# 12 "/home/vlk/Projects/esp_lp_relay/esp8266_longpoll.ino" 2
-# 13 "/home/vlk/Projects/esp_lp_relay/esp8266_longpoll.ino" 2
-# 14 "/home/vlk/Projects/esp_lp_relay/esp8266_longpoll.ino" 2
-# 15 "/home/vlk/Projects/esp_lp_relay/esp8266_longpoll.ino" 2
-# 16 "/home/vlk/Projects/esp_lp_relay/esp8266_longpoll.ino" 2
+# 11 "/home/vlk/projects/esprelay-longpoll/esp8266_longpoll.ino" 2
+# 12 "/home/vlk/projects/esprelay-longpoll/esp8266_longpoll.ino" 2
+# 13 "/home/vlk/projects/esprelay-longpoll/esp8266_longpoll.ino" 2
+# 14 "/home/vlk/projects/esprelay-longpoll/esp8266_longpoll.ino" 2
+# 15 "/home/vlk/projects/esprelay-longpoll/esp8266_longpoll.ino" 2
+# 16 "/home/vlk/projects/esprelay-longpoll/esp8266_longpoll.ino" 2
 
-# 18 "/home/vlk/Projects/esp_lp_relay/esp8266_longpoll.ino" 2
+# 18 "/home/vlk/projects/esprelay-longpoll/esp8266_longpoll.ino" 2
 
 // Web pages
-# 21 "/home/vlk/Projects/esp_lp_relay/esp8266_longpoll.ino" 2
-# 22 "/home/vlk/Projects/esp_lp_relay/esp8266_longpoll.ino" 2
+# 21 "/home/vlk/projects/esprelay-longpoll/esp8266_longpoll.ino" 2
+# 22 "/home/vlk/projects/esprelay-longpoll/esp8266_longpoll.ino" 2
 
 bool config_ready;
 bool switch_state = false;

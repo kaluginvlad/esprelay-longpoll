@@ -1,5 +1,5 @@
-/home/vlk/Projects/esp_lp_relay/build/sketch/IOTConfig.cpp.o: \
- /home/vlk/Projects/esp_lp_relay/build/sketch/IOTConfig.cpp \
+/home/vlk/projects/esprelay-longpoll/build/sketch/IOTConfig.cpp.o: \
+ /home/vlk/projects/esprelay-longpoll/build/sketch/IOTConfig.cpp \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/string.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/_ansi.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/newlib.h \
@@ -68,4 +68,4 @@
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/debug.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/variants/nodemcu/pins_arduino.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/variants/nodemcu/../generic/common.h \
- /home/vlk/Projects/esp_lp_relay/build/sketch/IOTConfig.h
+ /home/vlk/projects/esprelay-longpoll/build/sketch/IOTConfig.h

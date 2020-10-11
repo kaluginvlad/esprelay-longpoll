@@ -1,4 +1,4 @@
-/home/vlk/Projects/esp_lp_relay/build/libraries/ESP8266WiFi/WiFiServerSecureAxTLS.cpp.o: \
+/home/vlk/projects/esprelay-longpoll/build/libraries/ESP8266WiFi/WiFiServerSecureAxTLS.cpp.o: \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/libraries/ESP8266WiFi/src/WiFiServerSecureAxTLS.cpp \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/tools/sdk/include/osapi.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/string.h \

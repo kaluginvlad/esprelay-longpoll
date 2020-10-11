@@ -1,4 +1,4 @@
-/home/vlk/Projects/esp_lp_relay/build/core/Updater.cpp.o: \
+/home/vlk/projects/esprelay-longpoll/build/core/Updater.cpp.o: \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/Updater.cpp \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/Updater.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/Arduino.h \
@@ -71,7 +71,7 @@
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/eboot_command.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/esp8266_peri.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/StackThunk.h \
- /home/vlk/Projects/esp_lp_relay/build/core/Updater_Signing.h \
+ /home/vlk/projects/esprelay-longpoll/build/core/Updater_Signing.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/tools/sdk/include/spi_flash.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/tools/sdk/include/user_interface.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/tools/sdk/include/os_type.h \

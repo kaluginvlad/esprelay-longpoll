@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#line 1 "/home/vlk/Projects/esp_lp_relay/esp8266_longpoll.ino"
+#line 1 "/home/vlk/projects/esprelay-longpoll/esp8266_longpoll.ino"
 /* ESP8266 - IOT
  * 
  * Longpoll based WiFi relay
@@ -45,21 +45,21 @@ ESP8266HTTPUpdateServer httpUpdater;
 HTTPClient http;
 
 // Send report to server as json
-#line 46 "/home/vlk/Projects/esp_lp_relay/esp8266_longpoll.ino"
+#line 46 "/home/vlk/projects/esprelay-longpoll/esp8266_longpoll.ino"
 void send_report();
-#line 77 "/home/vlk/Projects/esp_lp_relay/esp8266_longpoll.ino"
+#line 77 "/home/vlk/projects/esprelay-longpoll/esp8266_longpoll.ino"
 void setup();
-#line 138 "/home/vlk/Projects/esp_lp_relay/esp8266_longpoll.ino"
+#line 138 "/home/vlk/projects/esprelay-longpoll/esp8266_longpoll.ino"
 void loop();
-#line 147 "/home/vlk/Projects/esp_lp_relay/esp8266_longpoll.ino"
+#line 147 "/home/vlk/projects/esprelay-longpoll/esp8266_longpoll.ino"
 void HTTP_handleRoot();
-#line 152 "/home/vlk/Projects/esp_lp_relay/esp8266_longpoll.ino"
+#line 152 "/home/vlk/projects/esprelay-longpoll/esp8266_longpoll.ino"
 void HTTP_handleCSS();
-#line 156 "/home/vlk/Projects/esp_lp_relay/esp8266_longpoll.ino"
+#line 156 "/home/vlk/projects/esprelay-longpoll/esp8266_longpoll.ino"
 void request_logpoll();
-#line 199 "/home/vlk/Projects/esp_lp_relay/esp8266_longpoll.ino"
+#line 199 "/home/vlk/projects/esprelay-longpoll/esp8266_longpoll.ino"
 void check_action(String action);
-#line 46 "/home/vlk/Projects/esp_lp_relay/esp8266_longpoll.ino"
+#line 46 "/home/vlk/projects/esprelay-longpoll/esp8266_longpoll.ino"
 void send_report() {
   conf.configure(EEPROMReadString(4)); // Init configurator
   

@@ -1,4 +1,4 @@
-/home/vlk/Projects/esp_lp_relay/build/core/flash_hal.cpp.o: \
+/home/vlk/projects/esprelay-longpoll/build/core/flash_hal.cpp.o: \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/flash_hal.cpp \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/Arduino.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/stdlib.h \

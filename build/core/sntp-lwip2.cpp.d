@@ -1,4 +1,4 @@
-/home/vlk/Projects/esp_lp_relay/build/core/sntp-lwip2.cpp.o: \
+/home/vlk/projects/esprelay-longpoll/build/core/sntp-lwip2.cpp.o: \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/sntp-lwip2.cpp \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/tools/sdk/lwip2/include/lwip/init.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/tools/sdk/lwip2/include/lwip/opt.h \
