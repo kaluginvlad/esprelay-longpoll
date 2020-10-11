@@ -1,4 +1,4 @@
-/home/vlk/projects/esprelay-longpoll/build/core/Crypto.cpp.o: \
+/home/vlk/Projects/esprelay-longpoll/build/core/Crypto.cpp.o: \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/Crypto.cpp \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/Crypto.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/Arduino.h \

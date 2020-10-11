@@ -1,4 +1,4 @@
-/home/vlk/projects/esprelay-longpoll/build/libraries/ESP8266WiFi/BearSSLHelpers.cpp.o: \
+/home/vlk/Projects/esprelay-longpoll/build/libraries/ESP8266WiFi/BearSSLHelpers.cpp.o: \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/libraries/ESP8266WiFi/src/BearSSLHelpers.cpp \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/libraries/ESP8266WiFi/src/BearSSLHelpers.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/tools/sdk/include/bearssl/bearssl.h \
@@ -84,4 +84,4 @@
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/WString.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/Stream.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/md5.h \
- /home/vlk/projects/esprelay-longpoll/build/core/Updater_Signing.h
+ /home/vlk/Projects/esprelay-longpoll/build/core/Updater_Signing.h

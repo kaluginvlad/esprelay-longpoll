@@ -1,5 +1,5 @@
-/home/vlk/projects/esprelay-longpoll/build/sketch/esp8266_longpoll.ino.cpp.o: \
- /home/vlk/projects/esprelay-longpoll/build/sketch/esp8266_longpoll.ino.cpp \
+/home/vlk/Projects/esprelay-longpoll/build/sketch/esp8266_longpoll.ino.cpp.o: \
+ /home/vlk/Projects/esprelay-longpoll/build/sketch/esp8266_longpoll.ino.cpp \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/Arduino.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/stdlib.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/machine/ieeefp.h \
@@ -166,11 +166,11 @@
  /home/vlk/Arduino/libraries/ArduinoJson/src/ArduinoJson.h \
  /home/vlk/Arduino/libraries/ArduinoJson/src/ArduinoJson.hpp \
  /home/vlk/Arduino/libraries/ArduinoJson/src/ArduinoJson/Configuration.hpp \
- /home/vlk/projects/esprelay-longpoll/build/sketch/WiFi_configurator.h \
- /home/vlk/projects/esprelay-longpoll/build/sketch/EEPROM_tools.h \
- /home/vlk/projects/esprelay-longpoll/build/sketch/IOTConfig.h \
+ /home/vlk/Projects/esprelay-longpoll/build/sketch/WiFi_configurator.h \
+ /home/vlk/Projects/esprelay-longpoll/build/sketch/EEPROM_tools.h \
+ /home/vlk/Projects/esprelay-longpoll/build/sketch/IOTConfig.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/libraries/Ticker/src/Ticker.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/Schedule.h \
- /home/vlk/projects/esprelay-longpoll/build/sketch/web_assets/c++/html_config.h \
- /home/vlk/projects/esprelay-longpoll/build/sketch/web_assets/c++/html_css.h \
- /home/vlk/projects/esprelay-longpoll/build/sketch/web_assets/c++/html_root.h
+ /home/vlk/Projects/esprelay-longpoll/build/sketch/web_assets/c++/html_config.h \
+ /home/vlk/Projects/esprelay-longpoll/build/sketch/web_assets/c++/html_css.h \
+ /home/vlk/Projects/esprelay-longpoll/build/sketch/web_assets/c++/html_root.h

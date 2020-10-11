@@ -1,4 +1,4 @@
-/home/vlk/projects/esprelay-longpoll/build/libraries/ESP8266WiFi/ESP8266WiFiGratuitous.cpp.o: \
+/home/vlk/Projects/esprelay-longpoll/build/libraries/ESP8266WiFi/ESP8266WiFiGratuitous.cpp.o: \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/libraries/ESP8266WiFi/src/ESP8266WiFiGratuitous.cpp \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/tools/sdk/lwip2/include/lwip/init.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/tools/sdk/lwip2/include/lwip/opt.h \

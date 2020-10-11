@@ -1,4 +1,4 @@
-/home/vlk/projects/esprelay-longpoll/build/core/FS.cpp.o: \
+/home/vlk/Projects/esprelay-longpoll/build/core/FS.cpp.o: \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/FS.cpp \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/FS.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/Arduino.h \

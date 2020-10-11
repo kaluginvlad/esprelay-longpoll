@@ -1,4 +1,4 @@
-/home/vlk/projects/esprelay-longpoll/build/libraries/ESP8266WiFi/WiFiUdp.cpp.o: \
+/home/vlk/Projects/esprelay-longpoll/build/libraries/ESP8266WiFi/WiFiUdp.cpp.o: \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/libraries/ESP8266WiFi/src/WiFiUdp.cpp \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/libraries/ESP8266WiFi/src/include/wl_definitions.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/tools/sdk/include/osapi.h \

@@ -1,4 +1,4 @@
-/home/vlk/projects/esprelay-longpoll/build/core/gdb_hooks.cpp.o: \
+/home/vlk/Projects/esprelay-longpoll/build/core/gdb_hooks.cpp.o: \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/gdb_hooks.cpp \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/tools/sdk/include/ets_sys.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/tools/sdk/include/c_types.h \

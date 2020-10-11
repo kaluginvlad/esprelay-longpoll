@@ -1,4 +1,4 @@
-/home/vlk/projects/esprelay-longpoll/build/libraries/ESP8266HTTPClient/ESP8266HTTPClient.cpp.o: \
+/home/vlk/Projects/esprelay-longpoll/build/libraries/ESP8266HTTPClient/ESP8266HTTPClient.cpp.o: \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/libraries/ESP8266HTTPClient/src/ESP8266HTTPClient.cpp \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/Arduino.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/stdlib.h \

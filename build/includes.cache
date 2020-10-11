@@ -10,47 +10,47 @@
     "Includepath": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/variants/nodemcu"
   },
   {
-    "Sourcefile": "/home/vlk/projects/esprelay-longpoll/build/sketch/esp8266_longpoll.ino.cpp",
+    "Sourcefile": "/home/vlk/Projects/esprelay-longpoll/build/sketch/esp8266_longpoll.ino.cpp",
     "Include": "ESP8266WiFi.h",
     "Includepath": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/libraries/ESP8266WiFi/src"
   },
   {
-    "Sourcefile": "/home/vlk/projects/esprelay-longpoll/build/sketch/esp8266_longpoll.ino.cpp",
+    "Sourcefile": "/home/vlk/Projects/esprelay-longpoll/build/sketch/esp8266_longpoll.ino.cpp",
     "Include": "ESP8266WebServer.h",
     "Includepath": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/libraries/ESP8266WebServer/src"
   },
   {
-    "Sourcefile": "/home/vlk/projects/esprelay-longpoll/build/sketch/esp8266_longpoll.ino.cpp",
+    "Sourcefile": "/home/vlk/Projects/esprelay-longpoll/build/sketch/esp8266_longpoll.ino.cpp",
     "Include": "ESP8266HTTPUpdateServer.h",
     "Includepath": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/libraries/ESP8266HTTPUpdateServer/src"
   },
   {
-    "Sourcefile": "/home/vlk/projects/esprelay-longpoll/build/sketch/esp8266_longpoll.ino.cpp",
+    "Sourcefile": "/home/vlk/Projects/esprelay-longpoll/build/sketch/esp8266_longpoll.ino.cpp",
     "Include": "ESP8266HTTPClient.h",
     "Includepath": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/libraries/ESP8266HTTPClient/src"
   },
   {
-    "Sourcefile": "/home/vlk/projects/esprelay-longpoll/build/sketch/esp8266_longpoll.ino.cpp",
+    "Sourcefile": "/home/vlk/Projects/esprelay-longpoll/build/sketch/esp8266_longpoll.ino.cpp",
     "Include": "EEPROM.h",
     "Includepath": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/libraries/EEPROM"
   },
   {
-    "Sourcefile": "/home/vlk/projects/esprelay-longpoll/build/sketch/esp8266_longpoll.ino.cpp",
+    "Sourcefile": "/home/vlk/Projects/esprelay-longpoll/build/sketch/esp8266_longpoll.ino.cpp",
     "Include": "ArduinoJson.h",
     "Includepath": "/home/vlk/Arduino/libraries/ArduinoJson/src"
   },
   {
-    "Sourcefile": "/home/vlk/projects/esprelay-longpoll/build/sketch/esp8266_longpoll.ino.cpp",
+    "Sourcefile": "/home/vlk/Projects/esprelay-longpoll/build/sketch/esp8266_longpoll.ino.cpp",
     "Include": "Ticker.h",
     "Includepath": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/libraries/Ticker/src"
   },
   {
-    "Sourcefile": "/home/vlk/projects/esprelay-longpoll/build/sketch/esp8266_longpoll.ino.cpp",
+    "Sourcefile": "/home/vlk/Projects/esprelay-longpoll/build/sketch/esp8266_longpoll.ino.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/home/vlk/projects/esprelay-longpoll/build/sketch/IOTConfig.cpp",
+    "Sourcefile": "/home/vlk/Projects/esprelay-longpoll/build/sketch/IOTConfig.cpp",
     "Include": "",
     "Includepath": null
   },

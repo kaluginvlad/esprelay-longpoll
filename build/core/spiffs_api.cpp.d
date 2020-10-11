@@ -1,4 +1,4 @@
-/home/vlk/projects/esprelay-longpoll/build/core/spiffs_api.cpp.o: \
+/home/vlk/Projects/esprelay-longpoll/build/core/spiffs_api.cpp.o: \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/spiffs_api.cpp \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/spiffs_api.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/FS.h \

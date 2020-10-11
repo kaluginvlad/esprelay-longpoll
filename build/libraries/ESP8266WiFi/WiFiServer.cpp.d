@@ -1,4 +1,4 @@
-/home/vlk/projects/esprelay-longpoll/build/libraries/ESP8266WiFi/WiFiServer.cpp.o: \
+/home/vlk/Projects/esprelay-longpoll/build/libraries/ESP8266WiFi/WiFiServer.cpp.o: \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/libraries/ESP8266WiFi/src/WiFiServer.cpp \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/tools/sdk/include/osapi.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/string.h \

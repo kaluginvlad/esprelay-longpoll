@@ -1,4 +1,4 @@
-/home/vlk/projects/esprelay-longpoll/build/libraries/Ticker/Ticker.cpp.o: \
+/home/vlk/Projects/esprelay-longpoll/build/libraries/Ticker/Ticker.cpp.o: \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/libraries/Ticker/src/Ticker.cpp \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/tools/sdk/include/c_types.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/stdint.h \

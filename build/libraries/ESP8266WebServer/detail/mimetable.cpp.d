@@ -1,4 +1,4 @@
-/home/vlk/projects/esprelay-longpoll/build/libraries/ESP8266WebServer/detail/mimetable.cpp.o: \
+/home/vlk/Projects/esprelay-longpoll/build/libraries/ESP8266WebServer/detail/mimetable.cpp.o: \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/libraries/ESP8266WebServer/src/detail/mimetable.cpp \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/libraries/ESP8266WebServer/src/detail/mimetable.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/WString.h \

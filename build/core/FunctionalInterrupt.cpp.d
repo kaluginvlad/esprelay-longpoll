@@ -1,4 +1,4 @@
-/home/vlk/projects/esprelay-longpoll/build/core/FunctionalInterrupt.cpp.o: \
+/home/vlk/Projects/esprelay-longpoll/build/core/FunctionalInterrupt.cpp.o: \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/FunctionalInterrupt.cpp \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/FunctionalInterrupt.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/stdint.h \

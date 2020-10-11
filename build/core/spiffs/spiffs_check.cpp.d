@@ -1,4 +1,4 @@
-/home/vlk/projects/esprelay-longpoll/build/core/spiffs/spiffs_check.cpp.o: \
+/home/vlk/Projects/esprelay-longpoll/build/core/spiffs/spiffs_check.cpp.o: \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/spiffs/spiffs_check.cpp \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/spiffs/spiffs.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/spiffs/spiffs_config.h \

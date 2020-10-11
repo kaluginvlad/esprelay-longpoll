@@ -1,12 +1,12 @@
 {
   "additionalFiles": "..,..,..,..,../../..,../../..,../../..",
   "builtInLibrariesFolders": "",
-  "builtInToolsFolders": "/home/vlk/soft/arduino/tools-builder,/home/vlk/.arduino15/packages",
+  "builtInToolsFolders": "/home/vlk/soft/arduino-1.8.13/tools-builder,/home/vlk/.arduino15/packages",
   "compiler.optimization_flags": "",
   "customBuildProperties": "",
   "fqbn": "esp8266:esp8266:nodemcuv2",
-  "hardwareFolders": "/home/vlk/soft/arduino/hardware,/home/vlk/.arduino15/packages",
-  "otherLibrariesFolders": "/home/vlk/soft/arduino/libraries,/home/vlk/Arduino/libraries",
+  "hardwareFolders": "/home/vlk/soft/arduino-1.8.13/hardware,/home/vlk/.arduino15/packages",
+  "otherLibrariesFolders": "/home/vlk/soft/arduino-1.8.13/libraries,/home/vlk/Arduino/libraries",
   "runtime.ide.version": "10600",
-  "sketchLocation": "/home/vlk/projects/esprelay-longpoll/esp8266_longpoll.ino"
+  "sketchLocation": "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino"
 }

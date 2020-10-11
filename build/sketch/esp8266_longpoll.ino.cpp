@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#line 1 "/home/vlk/projects/esprelay-longpoll/esp8266_longpoll.ino"
+#line 1 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino"
 /* ESP8266 - IOT
  * 
  * Longpoll based WiFi relay
@@ -22,6 +22,8 @@
 #include "web_assets/c++/html_css.h"
 #include "web_assets/c++/html_root.h"
 
+#define BUILDDATE "11.10.2020"
+
 bool config_ready;
 bool switch_state = false;
 
@@ -36,31 +38,32 @@ const String lp_fp = "DC 33 C8 7C BF E5 AE 9E B7 F7 B4 CE 4C 1F EA 38 9F C9 6B A
 /* ************** */
 
 String lp_access_key;
-
 // Create instance of WebServer on port 80
 ESP8266WebServer web_srv(80);
-// Create instance of HTTP updater
-ESP8266HTTPUpdateServer httpUpdater;
-// Create HTTP client
-HTTPClient http;
+
+// Create HTTP updater
+ESP8266HTTPUpdateServer http_updater;
 
 // Send report to server as json
-#line 46 "/home/vlk/projects/esprelay-longpoll/esp8266_longpoll.ino"
+#line 46 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino"
 void send_report();
-#line 77 "/home/vlk/projects/esprelay-longpoll/esp8266_longpoll.ino"
+#line 82 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino"
 void setup();
-#line 138 "/home/vlk/projects/esprelay-longpoll/esp8266_longpoll.ino"
+#line 144 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino"
 void loop();
-#line 147 "/home/vlk/projects/esprelay-longpoll/esp8266_longpoll.ino"
+#line 153 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino"
 void HTTP_handleRoot();
-#line 152 "/home/vlk/projects/esprelay-longpoll/esp8266_longpoll.ino"
+#line 158 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino"
 void HTTP_handleCSS();
-#line 156 "/home/vlk/projects/esprelay-longpoll/esp8266_longpoll.ino"
+#line 162 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino"
 void request_logpoll();
-#line 199 "/home/vlk/projects/esprelay-longpoll/esp8266_longpoll.ino"
+#line 209 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino"
 void check_action(String action);
-#line 46 "/home/vlk/projects/esprelay-longpoll/esp8266_longpoll.ino"
+#line 46 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino"
 void send_report() {
+  // Create HTTP client
+  HTTPClient report_http;
+
   conf.configure(EEPROMReadString(4)); // Init configurator
   
   StaticJsonDocument<500> report_doc;
@@ -79,15 +82,17 @@ void send_report() {
   serializeJson(report_doc, serialized_doc);
 
   String report_url = lp_server+"api/iot_report?access_key="+lp_access_key;
-  http.setTimeout(2000);
-  http.begin(report_url, lp_fp);
-  http.addHeader("Content-Type", "application/json");
+  report_http.setTimeout(2000);
+  report_http.begin(report_url, lp_fp);
+  report_http.addHeader("Content-Type", "application/json");
 
-  int http_code = http.POST(String (serialized_doc));
+  int http_code = report_http.POST(String (serialized_doc));
   
   Serial.println(http_code);
-  Serial.println(http.getString());
+  Serial.println(report_http.getString());
   Serial.println("Report had been sent!");
+
+  report_http.end();
   
 }
 
@@ -106,8 +111,9 @@ void setup() {
   );
 
   Serial.println("\nESP8266-IOT CONFIGURATOR ver. 0.6 (c) Vladislav Kalugin, 02.10.2020");
-  Serial.println("ESP IOT Relay ver 0.1 alpha\n");
-  
+  Serial.print("ESP8266 IOT LONGPOLL RELAY. Build: ");
+  Serial.println(BUILDDATE);
+
   pinMode(RELAY_PIN, OUTPUT);
   
   // Begin EEPROM 
@@ -139,7 +145,7 @@ void setup() {
     web_srv.on("/style.css", HTTP_handleCSS);
     
     // Start HTTP Updater  
-    httpUpdater.setup(&web_srv, "/firmware");
+    http_updater.setup(&web_srv, "/firmware");
     // Start WEB-server
     web_srv.begin();
     Serial.println("Web configurator ready!");
@@ -171,17 +177,21 @@ void HTTP_handleCSS() {
 }
 
 void request_logpoll() {
+  // Create HTTP longpoll client
+  HTTPClient lp_http;
+
   String url = lp_server+"longpoll?access_key="+lp_access_key;
-  http.setTimeout(25000);
-  http.begin(url, lp_fp);
-  int http_code = http.GET();
+  lp_http.setTimeout(25000);
+  lp_http.begin(url, lp_fp);
+
+  int http_code = lp_http.GET();
 
   Serial.println(http_code);
-  Serial.println(http.getString());
+  Serial.println(lp_http.getString());
   
   if (http_code == 200) {
     StaticJsonDocument<200> action;
-    DeserializationError error = deserializeJson(action, http.getString());
+    DeserializationError error = deserializeJson(action, lp_http.getString());
 
     // Test if parsing succeeds.
     if (error) {
@@ -209,7 +219,7 @@ void request_logpoll() {
     delay(5000);
   }
 
-  http.end();
+  lp_http.end();
 }
 
 // Process action
