@@ -74,26 +74,6 @@ void HTTPhandleWiFiConf(ESP8266WebServer &web_srv) {
       web_srv.send(400, "text/html", "Invalid arguments!");
     }
   });
-
-  // Check WiFi creds
-  web_srv.on("/api/wificheck", [&web_srv]() {
-    if (WiFi.status() == WL_CONNECTED) {
-      web_srv.send(200, "text/html", "already connected");
-      return;
-    }
-
-    WiFi.begin(web_srv.arg("SSID"), web_srv.arg("PASS"));
-    for (int i = 0; i < 100; i++) {
-      if (WiFi.status() == WL_CONNECTED) {
-        web_srv.send(200, "text/html", "success");
-        break;
-      }
-      delay(100);
-    }
-    web_srv.send(200, "text/html", "fail");
-
-  });
-
 }
 
 void led_toggle() {

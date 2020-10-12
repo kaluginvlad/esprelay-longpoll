@@ -71,7 +71,7 @@ void send_report() {
   char serialized_doc[1000];
   serializeJson(report_doc, serialized_doc);
 
-  String report_url = lp_server+"api/iot_report?access_key="+lp_access_key;
+  String report_url = lp_server+"devapi/iot_report?access_key="+lp_access_key;
   report_http.setTimeout(2000);
   report_http.begin(report_url, lp_fp);
   report_http.addHeader("Content-Type", "application/json");
@@ -169,7 +169,7 @@ void request_logpoll() {
   // Create HTTP longpoll client
   HTTPClient lp_http;
 
-  String url = lp_server+"longpoll?access_key="+lp_access_key;
+  String url = lp_server+"devapi/longpoll?access_key="+lp_access_key;
   lp_http.setTimeout(25000);
   lp_http.begin(url, lp_fp);
 
