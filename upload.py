@@ -4,7 +4,7 @@ import requests, time, sys
 
 esp_host = sys.argv[1]
 
-fw_path = "build/esp8266_longpoll.ino.bin"
+fw_path = "build/esprelay-longpoll.ino.bin"
 
 print("HOST: %s" % (esp_host))
 print("Waiting for ESP8266...") 

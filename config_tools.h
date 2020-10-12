@@ -14,6 +14,8 @@ void updateWiFIConfig(String ssid, String passwd, String host, String secret_key
   char serialized_doc[512];
   serializeJson(eeprom_config_doc, serialized_doc);
 
+  eeprom_config_doc.clear();
+
   // Write config to the EEPROM
   EEPROMWriteString(4, String(serialized_doc));
   // Update checksum

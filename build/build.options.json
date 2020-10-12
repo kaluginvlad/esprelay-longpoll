@@ -8,5 +8,5 @@
   "hardwareFolders": "/home/vlk/soft/arduino-1.8.13/hardware,/home/vlk/.arduino15/packages",
   "otherLibrariesFolders": "/home/vlk/soft/arduino-1.8.13/libraries,/home/vlk/Arduino/libraries",
   "runtime.ide.version": "10600",
-  "sketchLocation": "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino"
+  "sketchLocation": "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
 }

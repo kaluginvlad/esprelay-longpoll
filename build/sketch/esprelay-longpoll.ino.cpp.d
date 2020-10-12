@@ -1,5 +1,5 @@
-/home/vlk/Projects/esprelay-longpoll/build/sketch/esp8266_longpoll.ino.cpp.o: \
- /home/vlk/Projects/esprelay-longpoll/build/sketch/esp8266_longpoll.ino.cpp \
+/home/vlk/Projects/esprelay-longpoll/build/sketch/esprelay-longpoll.ino.cpp.o: \
+ /home/vlk/Projects/esprelay-longpoll/build/sketch/esprelay-longpoll.ino.cpp \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/cores/esp8266/Arduino.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/stdlib.h \
  /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/machine/ieeefp.h \

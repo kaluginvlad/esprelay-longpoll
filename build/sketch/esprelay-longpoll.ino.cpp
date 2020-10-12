@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#line 1 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino"
+#line 1 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
 /* ESP8266 - IOT
  * 
  * Longpoll based WiFi relay
@@ -45,62 +45,70 @@ ESP8266WebServer web_srv(80);
 // Create HTTP updater
 ESP8266HTTPUpdateServer http_updater;
 
+// Create HTTP client
+HTTPClient http;
+
 // Send report to server as json
-#line 47 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino"
+#line 50 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
 void send_report();
-#line 83 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino"
+#line 91 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
 void setup();
-#line 144 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino"
+#line 152 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
 void loop();
-#line 153 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino"
+#line 161 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
 void HTTP_handleRoot();
-#line 158 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino"
+#line 166 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
 void HTTP_handleCSS();
-#line 162 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino"
+#line 170 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
 void request_logpoll();
-#line 209 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino"
+#line 217 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
 void check_action(String action);
-#line 47 "/home/vlk/Projects/esprelay-longpoll/esp8266_longpoll.ino"
+#line 50 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
 void send_report() {
-  // Create HTTP client
-  HTTPClient report_http;
 
   StaticJsonDocument<256> conf = readWiFiConfig();
   
-  StaticJsonDocument<500> report_doc;
+  StaticJsonDocument<256> report_doc;
   JsonObject root = report_doc.to<JsonObject>();
 
   root["dev_type"] = "esp_relay";
   
-  root["ssid"] = conf["ssid"];
+  root["ssid"] = conf["ssid"].as<String>();
+
+  conf.clear(); // Unload JSON
+
   root["ip"] = WiFi.localIP().toString();
   root["mask"] = WiFi.subnetMask().toString();
   root["gw"] = WiFi.gatewayIP().toString();
   root["dns"] = WiFi.dnsIP().toString();
   root["switch"] = switch_state;
 
-  char serialized_doc[1000];
+  char serialized_doc[512];
   serializeJson(report_doc, serialized_doc);
 
-  String report_url = lp_server+"devapi/iot_report?access_key="+lp_access_key;
-  report_http.setTimeout(2000);
-  report_http.begin(report_url, lp_fp);
-  report_http.addHeader("Content-Type", "application/json");
+  report_doc.clear(); // Unload JSON document from memory
 
-  int http_code = report_http.POST(String (serialized_doc));
+  Serial.println(String(serialized_doc));
+  Serial.println("Report done! Uploading...");
+
+  String report_url = lp_server+"devapi/iot_report?access_key="+lp_access_key;
+  http.setTimeout(5000);
+  http.begin(report_url, lp_fp);
+  http.addHeader("Content-Type", "application/json");
+
+  int http_code = http.POST(String(serialized_doc));
   
   Serial.println(http_code);
-  Serial.println(report_http.getString());
   Serial.println("Report had been sent!");
 
-  report_http.end();
+  http.end();
   
 }
 
 void setup() {
   // Begin serial
   Serial.begin(115200);
-  // Send a sort of logo :)
+  // Send a sort of a logo :)
   Serial.println(
   "\n\n"
   "    __ __      __            _     _    ____          __                    \n"
@@ -177,21 +185,21 @@ void HTTP_handleCSS() {
 }
 
 void request_logpoll() {
-  // Create HTTP longpoll client
-  HTTPClient lp_http;
-
   String url = lp_server+"devapi/longpoll?access_key="+lp_access_key;
-  lp_http.setTimeout(25000);
-  lp_http.begin(url, lp_fp);
+  http.setTimeout(25000);
+  http.begin(url, lp_fp);
 
-  int http_code = lp_http.GET();
+  int http_code = http.GET();
 
   Serial.println(http_code);
-  Serial.println(lp_http.getString());
+  Serial.println(http.getString());
+
   
   if (http_code == 200) {
     StaticJsonDocument<200> action;
-    DeserializationError error = deserializeJson(action, lp_http.getString());
+    DeserializationError error = deserializeJson(action, http.getString());
+    
+    http.end(); // Close connection
 
     // Test if parsing succeeds.
     if (error) {
@@ -208,6 +216,8 @@ void request_logpoll() {
        }
     }
 
+    action.clear();
+
     
   } else if (http_code == 401) {
     Serial.println("Wrong device code! Clearing config in 5 sec...");
@@ -218,8 +228,6 @@ void request_logpoll() {
     Serial.println("Unknown http code! Waiting 5 sec...");
     delay(5000);
   }
-
-  lp_http.end();
 }
 
 // Process action
