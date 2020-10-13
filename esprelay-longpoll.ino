@@ -21,7 +21,7 @@
 #include "web_assets/c++/html_css.h"
 #include "web_assets/c++/html_root.h"
 
-#define BUILDDATE "12.10.2020"
+#define BUILDDATE "14.10.2020"
 
 bool config_ready;
 bool switch_state = false;
@@ -106,6 +106,7 @@ void setup() {
   Serial.println(BUILDDATE);
 
   pinMode(RELAY_PIN, OUTPUT);
+  digitalWrite(RELAY_PIN, LOW);
   
   // Begin EEPROM 
   EEPROM.begin(4096);
@@ -155,7 +156,7 @@ void loop() {
   } else {
     request_logpoll();
   }
-  delay(50);
+  delay(200);
 }
 
 void HTTP_handleRoot() {

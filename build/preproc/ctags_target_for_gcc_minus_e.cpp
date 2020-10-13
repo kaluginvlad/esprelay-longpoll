@@ -109,9 +109,10 @@ void setup() {
   );
 
   Serial.print("\nESP8266 IOT LONGPOLL RELAY. \nBuild: ");
-  Serial.println("12.10.2020");
+  Serial.println("14.10.2020");
 
   pinMode(D1, 0x01);
+  digitalWrite(D1, 0x0);
 
   // Begin EEPROM 
   EEPROM.begin(4096);
@@ -161,7 +162,7 @@ void loop() {
   } else {
     request_logpoll();
   }
-  delay(50);
+  delay(200);
 }
 
 void HTTP_handleRoot() {

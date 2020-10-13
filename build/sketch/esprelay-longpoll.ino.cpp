@@ -23,7 +23,7 @@
 #include "web_assets/c++/html_css.h"
 #include "web_assets/c++/html_root.h"
 
-#define BUILDDATE "12.10.2020"
+#define BUILDDATE "14.10.2020"
 
 bool config_ready;
 bool switch_state = false;
@@ -53,15 +53,15 @@ HTTPClient http;
 void send_report();
 #line 91 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
 void setup();
-#line 152 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
+#line 153 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
 void loop();
-#line 161 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
+#line 162 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
 void HTTP_handleRoot();
-#line 166 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
+#line 167 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
 void HTTP_handleCSS();
-#line 170 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
+#line 171 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
 void request_logpoll();
-#line 217 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
+#line 218 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
 void check_action(String action);
 #line 50 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
 void send_report() {
@@ -123,6 +123,7 @@ void setup() {
   Serial.println(BUILDDATE);
 
   pinMode(RELAY_PIN, OUTPUT);
+  digitalWrite(RELAY_PIN, LOW);
   
   // Begin EEPROM 
   EEPROM.begin(4096);
@@ -172,7 +173,7 @@ void loop() {
   } else {
     request_logpoll();
   }
-  delay(50);
+  delay(200);
 }
 
 void HTTP_handleRoot() {
