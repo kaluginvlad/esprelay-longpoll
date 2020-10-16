@@ -23,7 +23,7 @@
 #include "web_assets/c++/html_css.h"
 #include "web_assets/c++/html_root.h"
 
-#define BUILDDATE "14.10.2020"
+#define BUILDDATE "16.10.2020"
 
 bool config_ready;
 bool switch_state = false;
@@ -48,23 +48,25 @@ ESP8266HTTPUpdateServer http_updater;
 // Create HTTP client
 HTTPClient http;
 
-// Send report to server as json
+// Send detailed report to server as json
 #line 50 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
-void send_report();
+void send_detailed_report();
 #line 91 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
+void send_status_report();
+#line 109 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
 void setup();
-#line 153 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
-void loop();
-#line 162 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
-void HTTP_handleRoot();
-#line 167 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
-void HTTP_handleCSS();
 #line 171 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
+void loop();
+#line 180 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
+void HTTP_handleRoot();
+#line 185 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
+void HTTP_handleCSS();
+#line 189 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
 void request_logpoll();
-#line 218 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
+#line 236 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
 void check_action(String action);
 #line 50 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
-void send_report() {
+void send_detailed_report() {
 
   StaticJsonDocument<256> conf = readWiFiConfig();
   
@@ -102,7 +104,25 @@ void send_report() {
   Serial.println("Report had been sent!");
 
   http.end();
-  
+}
+
+// Send simple report (relay state) to server as json
+void send_status_report() {
+
+  String switch_state_str;
+
+  if (switch_state) switch_state_str = "true"; else switch_state_str = "false";
+
+  String report = "{\"switch\": "+switch_state_str+"}";
+
+  String report_url = lp_server+"devapi/iot_report?access_key="+lp_access_key;
+  http.setTimeout(5000);
+  http.begin(report_url, lp_fp);
+  http.addHeader("Content-Type", "application/json");
+
+  http.POST(report);
+
+  http.end();
 }
 
 void setup() {
@@ -173,7 +193,7 @@ void loop() {
   } else {
     request_logpoll();
   }
-  delay(200);
+  delay(50);
 }
 
 void HTTP_handleRoot() {
@@ -239,8 +259,10 @@ void check_action(String action) {
   } else if (action == "off") {
     digitalWrite(RELAY_PIN, LOW);
     switch_state = false;
+  } else if (action == "getswitch") {
+    send_status_report();
   } else if (action == "getreport") {
-    send_report();
+    send_detailed_report();
   } else if (action == "clreeprom") {
     EEPROMClear();
     ESP.restart();
