@@ -16,12 +16,4 @@
     
 *    GNU Make
 
-## Envirnonment variables:
-
-$ARDUINO_PATH - path to the Arduino installation
-
-$ARDUINO_PACK - ~/arduino15
-
-$ARDUINO_HOME - ~/Arduino
-
 ### To compile, type "make all"
