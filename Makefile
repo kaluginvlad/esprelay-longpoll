@@ -23,6 +23,11 @@ ARDUINO_PATH := 'C:\Program Files (x86)\Arduino\'
 ARDUINO_PACK := 'C:\Users\Vladislav Kalugin\AppData\Local\Arduino15\'
 ARDUINO_HOME := 'C:\Users\Vladislav Kalugin\Documents\Arduino\'
 
+## Arduino pathes (Linux/UNIX)
+#ARDUINO_PATH := '/home/vlk/soft/Arduino'
+#ARDUINO_PACK := /home/vlk/.arduino15'
+#ARDUINO_HOME := '/home/vlk/Arduino'
+
 all:
 	@echo "Building html..."
 	make -s html
