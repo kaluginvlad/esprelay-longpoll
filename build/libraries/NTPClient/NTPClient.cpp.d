@@ -1,5 +1,6 @@
-C:\Users\Vladislav\ Kalugin\Desktop\esprelay-longpoll\build\core\flash_hal.cpp.o: \
- C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266\flash_hal.cpp \
+C:\Users\Vladislav\ Kalugin\Desktop\esprelay-longpoll\build\libraries\NTPClient\NTPClient.cpp.o: \
+ C:\Users\Vladislav\ Kalugin\Documents\Arduino\libraries\NTPClient\NTPClient.cpp \
+ C:\Users\Vladislav\ Kalugin\Documents\Arduino\libraries\NTPClient\NTPClient.h \
  C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/Arduino.h \
  C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/stdlib.h \
  C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/machine/ieeefp.h \
@@ -68,6 +69,35 @@ C:\Users\Vladislav\ Kalugin\Desktop\esprelay-longpoll\build\core\flash_hal.cpp.o
  C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/debug.h \
  C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\variants\nodemcu/pins_arduino.h \
  C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\variants\nodemcu/../generic/common.h \
- C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266\debug.h \
- C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266\flash_hal.h \
- C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/spi_flash.h
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/Udp.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/IPAddress.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/Printable.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/init.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/opt.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwipopts.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/gluedebug.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/debug.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/arch.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/arch/cc.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip-err-t.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/mem.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/glue.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/user_interface.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/os_type.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/ets_sys.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/ipv4_addr.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/ip_addr.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/def.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/ip4_addr.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/ip6_addr.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/def.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/queue.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/spi_flash.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/gpio.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/gluedebug.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/ipv4_addr.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/limits.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/arch/cc.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip-git-hash.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/sys/time.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/debug.h

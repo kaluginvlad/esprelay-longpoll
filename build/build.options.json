@@ -1,12 +1,12 @@
 {
-  "additionalFiles": "..,..,..,../../..,../../..,../../..",
+  "additionalFiles": "..,..,..,..\\..\\..,..\\..\\..,..\\..\\..",
   "builtInLibrariesFolders": "",
-  "builtInToolsFolders": "/home/vlk/soft/arduino-1.8.13/tools-builder,/home/vlk/.arduino15/packages",
+  "builtInToolsFolders": "C:\\Program Files (x86)\\Arduino\\tools-builder,C:\\Users\\Vladislav Kalugin\\AppData\\Local\\Arduino15\\packages",
   "compiler.optimization_flags": "",
   "customBuildProperties": "",
   "fqbn": "esp8266:esp8266:nodemcuv2",
-  "hardwareFolders": "/home/vlk/soft/arduino-1.8.13/hardware,/home/vlk/.arduino15/packages",
-  "otherLibrariesFolders": "/home/vlk/soft/arduino-1.8.13/libraries,/home/vlk/Arduino/libraries",
+  "hardwareFolders": "C:\\Program Files (x86)\\Arduino\\hardware,C:\\Users\\Vladislav Kalugin\\AppData\\Local\\Arduino15\\packages",
+  "otherLibrariesFolders": "C:\\Program Files (x86)\\Arduino\\libraries,C:\\Users\\Vladislav Kalugin\\Documents\\Arduino\\libraries",
   "runtime.ide.version": "10600",
-  "sketchLocation": "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
+  "sketchLocation": "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino"
 }

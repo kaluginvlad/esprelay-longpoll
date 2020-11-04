@@ -1,4 +1,4 @@
-# 1 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
+# 1 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino"
 /* ESP8266 - IOT
 
  * 
@@ -10,47 +10,163 @@
  * Vladislav Kalugin (c) 2020
 
  */
-# 8 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
-# 9 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino" 2
-# 10 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino" 2
-# 11 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino" 2
-# 12 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino" 2
-# 13 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino" 2
-# 14 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino" 2
-# 15 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino" 2
+# 8 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino"
+# 9 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino" 2
+# 10 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino" 2
+# 11 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino" 2
+# 12 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino" 2
+# 13 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino" 2
+# 14 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino" 2
+# 15 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino" 2
+# 16 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino" 2
+# 17 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino" 2
+# 18 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino" 2
 
-# 17 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino" 2
-# 18 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino" 2
-# 19 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino" 2
+# 20 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino" 2
+# 21 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino" 2
+# 22 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino" 2
 
 // Web pages
-# 22 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino" 2
-# 23 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino" 2
+# 25 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino" 2
+# 26 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino" 2
 
+// Build version
 
 
 bool config_ready;
 bool switch_state = false;
 
+Ticker timetable_ticker;
+
 /* Configuration */
-
-
-
-
+# 44 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino"
 const String lp_server = "https://espiot.kaluginvlad.com/";
 const String lp_fp = "DC 33 C8 7C BF E5 AE 9E B7 F7 B4 CE 4C 1F EA 38 9F C9 6B AE";
 
 /* ************** */
 
 String lp_access_key;
-// Create instance of WebServer on port 80
+// WebServer on port 80
 ESP8266WebServer web_srv(80);
 
-// Create HTTP updater
+// HTTP updater
 ESP8266HTTPUpdateServer http_updater;
 
-// Create HTTP client
+// HTTP client
 HTTPClient http;
+
+// UDP fot NTP sync
+WiFiUDP ntpUDP;
+
+// NTP Client
+NTPClient time_client(ntpUDP, "ntp1.stratum1.ru" /* Host of the NTP server*/, 0 /* GMT +3 default*/);
+
+// Structure of timetable
+typedef struct {
+  int timestamp;
+  int timeout;
+  bool switch_state;
+} timetable_struct;
+
+// Create struct for timetable (for 50 entries)
+timetable_struct actions_timetable[50] = {__null, __null, __null};
+
+// Last timetable sync time
+int timetable_sync = 0;
+bool timetable_sync_required = false;
+
+// Checks timetable for action
+// Runs by Ticker every 1000 ms
+void check_timetable() {
+  // Sync timetable the next day
+  if (time_client.getEpochTime() - timetable_sync >= 86400 ) {
+    timetable_sync_required = true;
+  }
+
+  for (int i = 0; i < 50; i++) {
+    if (actions_timetable[i].timestamp == __null) continue;
+
+    Serial.println("record");
+
+    int timedelta = time_client.getEpochTime() - actions_timetable[i].timestamp;
+
+    Serial.println("====TIMETABLE DEBUG====");
+
+    Serial.println(actions_timetable[i].timestamp);
+    Serial.println(time_client.getEpochTime());
+
+    Serial.println(timedelta);
+
+    Serial.println("=======================");
+
+    if ( timedelta >= 0 and timedelta <= actions_timetable[i].timeout ) {
+      Serial.println("TIMETABLE: Action!");
+
+      // Toggle switch by action
+      switch_state = actions_timetable[i].switch_state;
+      digitalWrite(D1, switch_state);
+
+      // Clear completed record
+      actions_timetable[i] = {__null, __null, __null};
+    }
+  }
+}
+
+// Syncs actions timetable
+void sync_timetable() {
+  Serial.println("\nSynchronizing timetable...");
+
+  String timetable_url = lp_server+"devapi/get_timetable?access_key="+lp_access_key;
+  http.setTimeout(5000);
+  http.begin(timetable_url, lp_fp);
+  http.addHeader("Content-Type", "application/json");
+
+  int http_code = http.GET();
+
+  Serial.println(http_code);
+
+  String timetable_payload;
+
+  if (http_code == 200) {
+    timetable_payload = http.getString();
+  } else {
+    Serial.println("TT SYNC ERROR: Non-200 htcode");
+    return;
+  }
+  http.end();
+
+  Serial.println(timetable_payload);
+
+  // JSON Doc for timetable
+  StaticJsonDocument<1024> timetable_doc;
+
+  // Decode data
+  deserializeJson(timetable_doc, timetable_payload);
+
+  // Clean payload string
+  timetable_payload = "";
+
+  if (timetable_doc["status"] == "ok") {
+
+    // Clear old data
+    actions_timetable[50] = {__null, __null, __null};
+
+    // Write new timetable data
+    for (int i = 0; i < timetable_doc["table"].size(); i++) {
+      actions_timetable[i] = {timetable_doc["table"][i][0], timetable_doc["table"][i][1], timetable_doc["table"][i][2]};
+    }
+
+    Serial.println("Timetable sync completed!");
+
+    // Write last timetable sync time
+    timetable_sync = time_client.getEpochTime();
+
+    timetable_ticker.attach(1, check_timetable);
+
+  } else {
+    Serial.println("TT SYNC ERROR: Non-ok status");
+  }
+}
 
 // Send detailed report to server as json
 void send_detailed_report() {
@@ -71,6 +187,7 @@ void send_detailed_report() {
   root["gw"] = WiFi.gatewayIP().toString();
   root["dns"] = WiFi.dnsIP().toString();
   root["switch"] = switch_state;
+  root["build"] = "aplha-04.11.2020";
 
   char serialized_doc[512];
   serializeJson(report_doc, serialized_doc);
@@ -126,8 +243,9 @@ void setup() {
   "                   /____/                                                   "
   );
 
-  Serial.print("\nESP8266 IOT LONGPOLL RELAY. \nBuild: ");
-  Serial.println("16.10.2020");
+  Serial.print("\nESP8266 IOT LONGPOLL RELAY\nBuild: ");
+  Serial.println("aplha-04.11.2020");
+  Serial.println("\n");
 
   pinMode(D1, 0x01);
   digitalWrite(D1, 0x0);
@@ -166,11 +284,24 @@ void setup() {
     web_srv.begin();
     Serial.println("Web configurator ready!");
   } else {
-     StaticJsonDocument<256> iotconf = readWiFiConfig();
-     lp_access_key = iotconf["dkey"].as<String>();
+      StaticJsonDocument<256> iotconf = readWiFiConfig();
+      lp_access_key = iotconf["dkey"].as<String>();
 
-     Serial.println("\n\n[SERVICE DATA]\nURL: "+lp_server+"\nFingerprint: "+lp_fp+"\nDevice key: "+lp_access_key+"\n");
-     Serial.println("READY!\n");
+      Serial.print("\nNTP Server: ");
+      Serial.println("ntp1.stratum1.ru" /* Host of the NTP server*/);
+      Serial.println("Syncing TIME...");
+
+      time_client.begin();
+      time_client.update();
+
+      Serial.print("UNIX Timestamp: ");
+      Serial.println(time_client.getEpochTime());
+
+      // Start timetable synchronization
+      sync_timetable();
+
+      Serial.println("\n\n[ACCOUNTING DATA]\nURL: "+lp_server+"\nFingerprint: "+lp_fp+"\nDevice key: "+lp_access_key+"\n");
+      Serial.println("Ready!\n");
   }
 }
 
@@ -178,7 +309,14 @@ void loop() {
   if (!config_ready) {
      web_srv.handleClient();
   } else {
+    // Wait for longpoll
     request_logpoll();
+    // Sync timetable if required
+    if (timetable_sync_required) {
+      Serial.println("Timetable sync by requirement");
+      sync_timetable();
+      timetable_sync_required = false;
+    }
   }
   delay(50);
 }
@@ -238,7 +376,7 @@ void request_logpoll() {
   }
 }
 
-// Process action
+// Process actions
 void check_action(String action) {
   if (action == "on") {
     digitalWrite(D1, 0x1);
@@ -250,6 +388,12 @@ void check_action(String action) {
     send_status_report();
   } else if (action == "getreport") {
     send_detailed_report();
+  } else if (action == "ntpsync") {
+    Serial.println("Syncing NTP by request...");
+    time_client.update();
+  } else if (action == "ttblsync") {
+    Serial.println("Syncing timetable by request...");
+    sync_timetable();
   } else if (action == "clreeprom") {
     EEPROMClear();
     ESP.restart();

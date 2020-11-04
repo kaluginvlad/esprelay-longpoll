@@ -2,175 +2,165 @@
   {
     "Sourcefile": null,
     "Include": "",
-    "Includepath": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266"
+    "Includepath": "C:\\Users\\Vladislav Kalugin\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.7.4\\cores\\esp8266"
   },
   {
     "Sourcefile": null,
     "Include": "",
-    "Includepath": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/variants/nodemcu"
+    "Includepath": "C:\\Users\\Vladislav Kalugin\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.7.4\\variants\\nodemcu"
   },
   {
-    "Sourcefile": "/home/vlk/Projects/esprelay-longpoll/build/sketch/esprelay-longpoll.ino.cpp",
+    "Sourcefile": "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\build\\sketch\\esprelay-longpoll.ino.cpp",
     "Include": "ESP8266WiFi.h",
-    "Includepath": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src"
+    "Includepath": "C:\\Users\\Vladislav Kalugin\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.7.4\\libraries\\ESP8266WiFi\\src"
   },
   {
-    "Sourcefile": "/home/vlk/Projects/esprelay-longpoll/build/sketch/esprelay-longpoll.ino.cpp",
+    "Sourcefile": "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\build\\sketch\\esprelay-longpoll.ino.cpp",
     "Include": "ESP8266WebServer.h",
-    "Includepath": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WebServer/src"
+    "Includepath": "C:\\Users\\Vladislav Kalugin\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.7.4\\libraries\\ESP8266WebServer\\src"
   },
   {
-    "Sourcefile": "/home/vlk/Projects/esprelay-longpoll/build/sketch/esprelay-longpoll.ino.cpp",
+    "Sourcefile": "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\build\\sketch\\esprelay-longpoll.ino.cpp",
     "Include": "ESP8266HTTPUpdateServer.h",
-    "Includepath": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266HTTPUpdateServer/src"
+    "Includepath": "C:\\Users\\Vladislav Kalugin\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.7.4\\libraries\\ESP8266HTTPUpdateServer\\src"
   },
   {
-    "Sourcefile": "/home/vlk/Projects/esprelay-longpoll/build/sketch/esprelay-longpoll.ino.cpp",
+    "Sourcefile": "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\build\\sketch\\esprelay-longpoll.ino.cpp",
     "Include": "ESP8266HTTPClient.h",
-    "Includepath": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266HTTPClient/src"
+    "Includepath": "C:\\Users\\Vladislav Kalugin\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.7.4\\libraries\\ESP8266HTTPClient\\src"
   },
   {
-    "Sourcefile": "/home/vlk/Projects/esprelay-longpoll/build/sketch/esprelay-longpoll.ino.cpp",
+    "Sourcefile": "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\build\\sketch\\esprelay-longpoll.ino.cpp",
+    "Include": "NTPClient.h",
+    "Includepath": "C:\\Users\\Vladislav Kalugin\\Documents\\Arduino\\libraries\\NTPClient"
+  },
+  {
+    "Sourcefile": "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\build\\sketch\\esprelay-longpoll.ino.cpp",
     "Include": "EEPROM.h",
-    "Includepath": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/EEPROM"
+    "Includepath": "C:\\Users\\Vladislav Kalugin\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.7.4\\libraries\\EEPROM"
   },
   {
-    "Sourcefile": "/home/vlk/Projects/esprelay-longpoll/build/sketch/esprelay-longpoll.ino.cpp",
+    "Sourcefile": "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\build\\sketch\\esprelay-longpoll.ino.cpp",
     "Include": "ArduinoJson.h",
-    "Includepath": "/home/vlk/Arduino/libraries/ArduinoJson/src"
+    "Includepath": "C:\\Users\\Vladislav Kalugin\\Documents\\Arduino\\libraries\\ArduinoJson\\src"
   },
   {
-    "Sourcefile": "/home/vlk/Projects/esprelay-longpoll/build/sketch/esprelay-longpoll.ino.cpp",
+    "Sourcefile": "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\build\\sketch\\esprelay-longpoll.ino.cpp",
     "Include": "Ticker.h",
-    "Includepath": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/Ticker"
+    "Includepath": "C:\\Users\\Vladislav Kalugin\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.7.4\\libraries\\Ticker\\src"
   },
   {
-    "Sourcefile": "/home/vlk/Projects/esprelay-longpoll/build/sketch/esprelay-longpoll.ino.cpp",
+    "Sourcefile": "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\build\\sketch\\esprelay-longpoll.ino.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/BearSSLHelpers.cpp",
+    "Sourcefile": "C:\\Users\\Vladislav Kalugin\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.7.4\\libraries\\ESP8266WiFi\\src\\BearSSLHelpers.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/CertStoreBearSSL.cpp",
+    "Sourcefile": "C:\\Users\\Vladislav Kalugin\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.7.4\\libraries\\ESP8266WiFi\\src\\CertStoreBearSSL.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/ESP8266WiFi.cpp",
+    "Sourcefile": "C:\\Users\\Vladislav Kalugin\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.7.4\\libraries\\ESP8266WiFi\\src\\ESP8266WiFi.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/ESP8266WiFiAP.cpp",
+    "Sourcefile": "C:\\Users\\Vladislav Kalugin\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.7.4\\libraries\\ESP8266WiFi\\src\\ESP8266WiFiAP.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/ESP8266WiFiGeneric.cpp",
+    "Sourcefile": "C:\\Users\\Vladislav Kalugin\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.7.4\\libraries\\ESP8266WiFi\\src\\ESP8266WiFiGeneric.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/ESP8266WiFiMulti.cpp",
+    "Sourcefile": "C:\\Users\\Vladislav Kalugin\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.7.4\\libraries\\ESP8266WiFi\\src\\ESP8266WiFiGratuitous.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/ESP8266WiFiSTA-WPS.cpp",
+    "Sourcefile": "C:\\Users\\Vladislav Kalugin\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.7.4\\libraries\\ESP8266WiFi\\src\\ESP8266WiFiMulti.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/ESP8266WiFiSTA.cpp",
+    "Sourcefile": "C:\\Users\\Vladislav Kalugin\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.7.4\\libraries\\ESP8266WiFi\\src\\ESP8266WiFiSTA-WPS.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/ESP8266WiFiScan.cpp",
+    "Sourcefile": "C:\\Users\\Vladislav Kalugin\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.7.4\\libraries\\ESP8266WiFi\\src\\ESP8266WiFiSTA.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/WiFiClient.cpp",
+    "Sourcefile": "C:\\Users\\Vladislav Kalugin\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.7.4\\libraries\\ESP8266WiFi\\src\\ESP8266WiFiScan.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/WiFiClientSecureAxTLS.cpp",
+    "Sourcefile": "C:\\Users\\Vladislav Kalugin\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.7.4\\libraries\\ESP8266WiFi\\src\\WiFiClient.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/WiFiClientSecureBearSSL.cpp",
+    "Sourcefile": "C:\\Users\\Vladislav Kalugin\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.7.4\\libraries\\ESP8266WiFi\\src\\WiFiClientSecureAxTLS.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/WiFiServer.cpp",
+    "Sourcefile": "C:\\Users\\Vladislav Kalugin\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.7.4\\libraries\\ESP8266WiFi\\src\\WiFiClientSecureBearSSL.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/WiFiServerSecureAxTLS.cpp",
+    "Sourcefile": "C:\\Users\\Vladislav Kalugin\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.7.4\\libraries\\ESP8266WiFi\\src\\WiFiServer.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/WiFiServerSecureBearSSL.cpp",
+    "Sourcefile": "C:\\Users\\Vladislav Kalugin\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.7.4\\libraries\\ESP8266WiFi\\src\\WiFiServerSecureAxTLS.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/WiFiUdp.cpp",
+    "Sourcefile": "C:\\Users\\Vladislav Kalugin\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.7.4\\libraries\\ESP8266WiFi\\src\\WiFiServerSecureBearSSL.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WebServer/src/ESP8266WebServer.cpp",
+    "Sourcefile": "C:\\Users\\Vladislav Kalugin\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.7.4\\libraries\\ESP8266WiFi\\src\\WiFiUdp.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WebServer/src/ESP8266WebServerSecureAxTLS.cpp",
+    "Sourcefile": "C:\\Users\\Vladislav Kalugin\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.7.4\\libraries\\ESP8266WebServer\\src\\detail\\mimetable.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WebServer/src/ESP8266WebServerSecureBearSSL.cpp",
+    "Sourcefile": "C:\\Users\\Vladislav Kalugin\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.7.4\\libraries\\ESP8266HTTPClient\\src\\ESP8266HTTPClient.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WebServer/src/Parsing.cpp",
+    "Sourcefile": "C:\\Users\\Vladislav Kalugin\\Documents\\Arduino\\libraries\\NTPClient\\NTPClient.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WebServer/src/detail/mimetable.cpp",
+    "Sourcefile": "C:\\Users\\Vladislav Kalugin\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.7.4\\libraries\\EEPROM\\EEPROM.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266HTTPUpdateServer/src/ESP8266HTTPUpdateServer.cpp",
-    "Include": "",
-    "Includepath": null
-  },
-  {
-    "Sourcefile": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266HTTPClient/src/ESP8266HTTPClient.cpp",
-    "Include": "",
-    "Includepath": null
-  },
-  {
-    "Sourcefile": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/EEPROM/EEPROM.cpp",
-    "Include": "",
-    "Includepath": null
-  },
-  {
-    "Sourcefile": "/home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/Ticker/Ticker.cpp",
+    "Sourcefile": "C:\\Users\\Vladislav Kalugin\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.7.4\\libraries\\Ticker\\src\\Ticker.cpp",
     "Include": "",
     "Includepath": null
   }

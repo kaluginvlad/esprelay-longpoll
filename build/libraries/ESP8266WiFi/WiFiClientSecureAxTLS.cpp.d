@@ -1,164 +1,175 @@
-/home/vlk/Projects/esprelay-longpoll/build/libraries/ESP8266WiFi/WiFiClientSecureAxTLS.cpp.o: \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/WiFiClientSecureAxTLS.cpp \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/debug.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/stdint.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/machine/_default_types.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/sys/features.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/sys/_intsup.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/ESP8266WiFi.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/include/wl_definitions.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/IPAddress.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/WString.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/stdlib.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/machine/ieeefp.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/_ansi.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/newlib.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/sys/config.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/xtensa/config/core-isa.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/sys/reent.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/_ansi.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/sys/_types.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/machine/_types.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/sys/lock.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/sys/cdefs.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/machine/stdlib.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/alloca.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/string.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/sys/string.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/ctype.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/sys/ctype.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/sys/pgmspace.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/pgmspace.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/include/ets_sys.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/include/c_types.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/include/eagle_soc.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/include/osapi.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/user_config.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/Printable.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/lwip/init.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/lwip/opt.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/lwipopts.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/gluedebug.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/lwip/debug.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/lwip/arch.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/arch/cc.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/lwip-err-t.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/include/mem.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/gluedebug.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/include/ipv4_addr.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/lwip/ip_addr.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/lwip/def.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/lwip/ip4_addr.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/lwip/ip6_addr.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/lwip/def.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/stdio.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/sys/types.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/machine/types.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/sys/stdio.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/inttypes.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/limits.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/arch/cc.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/lwip-git-hash.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/sys/time.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/lwip/debug.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/ESP8266WiFiType.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/include/queue.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/ESP8266WiFiSTA.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/ESP8266WiFiGeneric.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/include/user_interface.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/include/os_type.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/include/ets_sys.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/include/ipv4_addr.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/include/queue.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/include/spi_flash.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/include/spi_flash_geometry.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/include/gpio.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/ESP8266WiFiAP.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/ESP8266WiFiScan.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/WiFiClient.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/Arduino.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/math.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/stdlib_noniso.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/binary.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/esp8266_peri.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/include/c_types.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/twi.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/Arduino.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/core_esp8266_features.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/core_esp8266_version.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/core_version.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/WCharacter.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/WString.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/HardwareSerial.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/time.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/machine/time.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/Stream.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/Print.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/Printable.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/uart.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/Esp.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/Updater.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/flash_utils.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/../../bootloaders/eboot/flash.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/MD5Builder.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/Stream.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/md5.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/debug.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/variants/nodemcu/pins_arduino.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/variants/nodemcu/../generic/common.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/Print.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/Client.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/IPAddress.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/include/slist.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/WiFiServer.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/Server.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/WiFiServerSecure.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/WiFiClientSecure.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/WiFiClientSecureBearSSL.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/include/bearssl/bearssl.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/include/bearssl/bearssl_hash.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/include/bearssl/bearssl_hmac.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/include/bearssl/bearssl_kdf.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/include/bearssl/bearssl_rand.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/include/bearssl/bearssl_block.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/include/bearssl/bearssl_prf.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/include/bearssl/bearssl_aead.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/include/bearssl/bearssl_rsa.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/include/bearssl/bearssl_ec.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/include/bearssl/bearssl_ssl.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/include/bearssl/bearssl_x509.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/include/bearssl/bearssl_pem.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/BearSSLHelpers.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/cores/esp8266/Updater.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/CertStoreBearSSL.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/BearSSLHelpers.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/WiFiServerSecureBearSSL.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/WiFiClientSecure.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/include/SSLContext.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/errno.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/sys/errno.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/lwip/ip.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/lwip/pbuf.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/lwip/err.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/lwip/netif.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/lwip/stats.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/lwip/mem.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/lwip/memp.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/lwip/priv/memp_std.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/lwip/priv/memp_priv.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/lwip/priv/mem_priv.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/lwip/ip4.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/lwip/prot/ip4.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/lwip/ip6.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/lwip/prot/ip.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/lwip/tcp.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/lwip/tcpbase.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/lwip/icmp.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/lwip/prot/icmp.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/lwip2/include/lwip/inet.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/include/ClientContext.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/include/DataSource.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/tools/sdk/libc/xtensa-lx106-elf/include/assert.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/WiFiClientSecureAxTLS.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/include/ssl.h \
- /home/vlk/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/libraries/ESP8266WiFi/src/include/ClientContext.h
+C:\Users\Vladislav\ Kalugin\Desktop\esprelay-longpoll\build\libraries\ESP8266WiFi\WiFiClientSecureAxTLS.cpp.o: \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\libraries\ESP8266WiFi\src\WiFiClientSecureAxTLS.cpp \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/debug.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/stdint.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/machine/_default_types.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/sys/features.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/sys/_intsup.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\libraries\ESP8266WiFi\src\ESP8266WiFi.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\libraries\ESP8266WiFi\src\include/wl_definitions.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/IPAddress.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/WString.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/stdlib.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/machine/ieeefp.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/_ansi.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/newlib.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/sys/config.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/xtensa/config/core-isa.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/sys/reent.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/_ansi.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/sys/_types.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/machine/_types.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/sys/lock.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/sys/cdefs.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/machine/stdlib.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/alloca.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/string.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/sys/string.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/ctype.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/sys/ctype.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/sys/pgmspace.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/pgmspace.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/ets_sys.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/c_types.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/eagle_soc.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/osapi.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/user_config.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/Printable.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/init.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/opt.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwipopts.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/gluedebug.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/debug.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/arch.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/arch/cc.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip-err-t.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/mem.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/glue.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/user_interface.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/os_type.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/ets_sys.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/ipv4_addr.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/ip_addr.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/def.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/ip4_addr.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/ip6_addr.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/def.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/queue.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/spi_flash.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/spi_flash_geometry.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/gpio.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/gluedebug.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/ipv4_addr.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/stdio.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/sys/types.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/machine/types.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/sys/stdio.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/inttypes.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/limits.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/arch/cc.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip-git-hash.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/sys/time.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/debug.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\libraries\ESP8266WiFi\src\ESP8266WiFiType.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/queue.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\libraries\ESP8266WiFi\src\ESP8266WiFiSTA.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\libraries\ESP8266WiFi\src\ESP8266WiFiGeneric.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\libraries\ESP8266WiFi\src\ESP8266WiFiAP.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\libraries\ESP8266WiFi\src\ESP8266WiFiScan.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\libraries\ESP8266WiFi\src\WiFiClient.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/Arduino.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/math.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/stdlib_noniso.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/binary.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/esp8266_peri.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/c_types.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/esp8266_undocumented.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/twi.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/Arduino.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/core_esp8266_features.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/core_esp8266_version.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/core_version.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/WCharacter.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/WString.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/HardwareSerial.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/../include/time.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/../include/_ansi.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/machine/time.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/Stream.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/Print.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/Printable.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/uart.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/Esp.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/spi_vendors.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/../../bootloaders/eboot/spi_vendors.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/Updater.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/flash_utils.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/../../bootloaders/eboot/flash.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/MD5Builder.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/Stream.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/md5.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/debug.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\variants\nodemcu/pins_arduino.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\variants\nodemcu/../generic/common.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/Print.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/Client.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/IPAddress.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\libraries\ESP8266WiFi\src\include/slist.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\libraries\ESP8266WiFi\src\WiFiServer.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/Server.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\libraries\ESP8266WiFi\src\WiFiServerSecure.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\libraries\ESP8266WiFi\src/WiFiClientSecure.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\libraries\ESP8266WiFi\src/WiFiClientSecureBearSSL.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\libraries\ESP8266WiFi\src/WiFiClient.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/bearssl/bearssl.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/bearssl/bearssl_hash.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/bearssl/bearssl_hmac.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/bearssl/bearssl_kdf.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/bearssl/bearssl_rand.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/bearssl/bearssl_block.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/bearssl/bearssl_prf.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/bearssl/bearssl_aead.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/bearssl/bearssl_rsa.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/bearssl/bearssl_ec.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/bearssl/bearssl_ssl.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/bearssl/bearssl_x509.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/include/bearssl/bearssl_pem.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\libraries\ESP8266WiFi\src/BearSSLHelpers.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/StackThunk.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/Updater.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\libraries\ESP8266WiFi\src/CertStoreBearSSL.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\libraries\ESP8266WiFi\src/BearSSLHelpers.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\cores\esp8266/FS.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\libraries\ESP8266WiFi\src\WiFiServerSecureBearSSL.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\libraries\ESP8266WiFi\src\WiFiClientSecureBearSSL.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\libraries\ESP8266WiFi\src\BearSSLHelpers.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\libraries\ESP8266WiFi\src\WiFiClientSecure.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\libraries\ESP8266WiFi\src\CertStoreBearSSL.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\libraries\ESP8266WiFi\src\include/SSLContext.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/errno.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/sys/errno.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/ip.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/pbuf.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/err.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/netif.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/stats.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/mem.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/memp.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/priv/memp_std.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/priv/memp_priv.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/priv/mem_priv.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/ip4.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/prot/ip4.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/ip6.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/prot/ip.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/tcp.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/tcpbase.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/icmp.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/prot/icmp.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/lwip2/include/lwip/inet.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\libraries\ESP8266WiFi\src/include/ClientContext.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\libraries\ESP8266WiFi\src/include/DataSource.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4/tools/sdk/libc/xtensa-lx106-elf/include/assert.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\libraries\ESP8266WiFi\src/WiFiClientSecureAxTLS.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\libraries\ESP8266WiFi\src/include/ssl.h \
+ C:\Users\Vladislav\ Kalugin\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.7.4\libraries\ESP8266WiFi\src\include/ClientContext.h

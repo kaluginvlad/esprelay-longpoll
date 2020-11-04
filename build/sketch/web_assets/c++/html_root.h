@@ -3,5 +3,5 @@
 
 #include <string.h>
 
-String html_root = "<!DOCTYPE html><html lang=en> <head><meta charset=UTF-8><meta name=viewport content=\"width=`, initial-scale=1.0\"><link rel=stylesheet href=style.css><title>ESP8266-IOT</title></head> <body> <div class=wrapper> <h2 class=center>Welcome to the ESP8266-IOT admin page!</h2> <p> <a href=/config>Configuration</a><br> <a href=/firmware>Firmware update</a> </p> </div> </body> </html>";
+String html_root = "<!DOCTYPE html><html lang=en> <head><meta charset=UTF-8><meta name=viewport content=\"width=`, initial-scale=1.0\"><link rel=stylesheet href=style.css><title>ESP8266-IOT</title></head> <body> <div class=wrapper> <h2 class=center>Умный выключатель</h2> <p> <a href=/config>Первоначальная конфигурация</a><br> <a href=/firmware>Обновление прошивки</a> </p> </div> </body> </html>";
 
