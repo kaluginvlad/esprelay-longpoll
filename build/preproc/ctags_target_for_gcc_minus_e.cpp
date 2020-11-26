@@ -1,4 +1,4 @@
-# 1 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino"
+# 1 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
 /* ESP8266 - IOT
 
  * 
@@ -10,25 +10,25 @@
  * Vladislav Kalugin (c) 2020
 
  */
-# 8 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino"
-# 9 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino" 2
-# 10 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino" 2
-# 11 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino" 2
-# 12 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino" 2
-# 13 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino" 2
-# 14 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino" 2
-# 15 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino" 2
-# 16 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino" 2
-# 17 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino" 2
-# 18 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino" 2
+# 8 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
+# 9 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino" 2
+# 10 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino" 2
+# 11 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino" 2
+# 12 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino" 2
+# 13 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino" 2
+# 14 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino" 2
+# 15 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino" 2
+# 16 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino" 2
+# 17 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino" 2
+# 18 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino" 2
 
-# 20 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino" 2
-# 21 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino" 2
-# 22 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino" 2
+# 20 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino" 2
+# 21 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino" 2
+# 22 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino" 2
 
 // Web pages
-# 25 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino" 2
-# 26 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino" 2
+# 25 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino" 2
+# 26 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino" 2
 
 // Build version
 
@@ -36,10 +36,12 @@
 bool config_ready;
 bool switch_state = false;
 
+const bool switch_reverse = true;
+
 Ticker timetable_ticker;
 
 /* Configuration */
-# 44 "C:\\Users\\Vladislav Kalugin\\Desktop\\esprelay-longpoll\\esprelay-longpoll.ino"
+# 46 "/home/vlk/Projects/esprelay-longpoll/esprelay-longpoll.ino"
 const String lp_server = "https://espiot.kaluginvlad.com/";
 const String lp_fp = "DC 33 C8 7C BF E5 AE 9E B7 F7 B4 CE 4C 1F EA 38 9F C9 6B AE";
 
@@ -86,8 +88,6 @@ void check_timetable() {
   for (int i = 0; i < 50; i++) {
     if (actions_timetable[i].timestamp == __null) continue;
 
-    Serial.println("record");
-
     int timedelta = time_client.getEpochTime() - actions_timetable[i].timestamp;
 
     Serial.println("====TIMETABLE DEBUG====");
@@ -102,9 +102,14 @@ void check_timetable() {
     if ( timedelta >= 0 and timedelta <= actions_timetable[i].timeout ) {
       Serial.println("TIMETABLE: Action!");
 
-      // Toggle switch by action
       switch_state = actions_timetable[i].switch_state;
-      digitalWrite(D1, switch_state);
+
+      // Toggle switch by action
+      if (switch_reverse){
+        digitalWrite(2, !switch_state);
+      } else {
+        digitalWrite(2, switch_state);
+      }
 
       // Clear completed record
       actions_timetable[i] = {__null, __null, __null};
@@ -149,7 +154,9 @@ void sync_timetable() {
   if (timetable_doc["status"] == "ok") {
 
     // Clear old data
-    actions_timetable[50] = {__null, __null, __null};
+    for (int i; i < 50; i++) {
+      actions_timetable[i] = {__null, __null, __null};
+    }
 
     // Write new timetable data
     for (int i = 0; i < timetable_doc["table"].size(); i++) {
@@ -187,7 +194,7 @@ void send_detailed_report() {
   root["gw"] = WiFi.gatewayIP().toString();
   root["dns"] = WiFi.dnsIP().toString();
   root["switch"] = switch_state;
-  root["build"] = "aplha-04.11.2020";
+  root["build"] = "aplha-22.11.2020";
 
   char serialized_doc[512];
   serializeJson(report_doc, serialized_doc);
@@ -232,23 +239,9 @@ void send_status_report() {
 void setup() {
   // Begin serial
   Serial.begin(115200);
-  // Send a sort of a logo :)
-  Serial.println(
-  "\n\n"
-  "    __ __      __            _     _    ____          __                    \n"
-  "   / //_/___ _/ /_  ______ _(_)___| |  / / /___ _____/ /_________  ____ ___ \n"
-  "  / ,< / __ `/ / / / / __ `/ / __ \\ | / / / __ `/ __  // ___/ __ \\/ __ `__ \\\n"
-  " / /| / /_/ / / /_/ / /_/ / / / / / |/ / / /_/ / /_/ // /__/ /_/ / / / / / /\n"
-  "/_/ |_\\__,_/_/\\__,_/\\__, /_/_/ /_/|___/_/\\__,_/\\__,_(_)___/\\____/_/ /_/ /_/ \n"
-  "                   /____/                                                   "
-  );
-
   Serial.print("\nESP8266 IOT LONGPOLL RELAY\nBuild: ");
-  Serial.println("aplha-04.11.2020");
+  Serial.println("aplha-22.11.2020");
   Serial.println("\n");
-
-  pinMode(D1, 0x01);
-  digitalWrite(D1, 0x0);
 
   // Begin EEPROM 
   EEPROM.begin(4096);
@@ -256,14 +249,14 @@ void setup() {
   // Start WiFi init
   config_ready = WiFiConfigure(web_srv);
 
-  pinMode(D7, 0x02);
+  pinMode(0, 0x02);
 
   // Add ovrride dialogue
   if (config_ready) {
     Serial.flush();
     Serial.print("Hold conf override button to enter conf mode!\n");
     for (int i = 0; i < 10; i++) {
-      if (digitalRead(D7) == 0x0 || Serial.available()) {
+      if (digitalRead(0) == 0x0 || Serial.available()) {
         config_ready = false;
         Serial.println("\nCONFIG MODE OVERRIDEN!");
         break;
@@ -284,8 +277,14 @@ void setup() {
     web_srv.begin();
     Serial.println("Web configurator ready!");
   } else {
+      // Setup output pin
+      pinMode(2, 0x01);
+      digitalWrite(2, switch_reverse);
+
+      // Get access key from config
       StaticJsonDocument<256> iotconf = readWiFiConfig();
       lp_access_key = iotconf["dkey"].as<String>();
+      iotconf.clear();
 
       Serial.print("\nNTP Server: ");
       Serial.println("ntp1.stratum1.ru" /* Host of the NTP server*/);
@@ -379,10 +378,10 @@ void request_logpoll() {
 // Process actions
 void check_action(String action) {
   if (action == "on") {
-    digitalWrite(D1, 0x1);
+    digitalWrite(2, !switch_reverse);
     switch_state = true;
   } else if (action == "off") {
-    digitalWrite(D1, 0x0);
+    digitalWrite(2, switch_reverse);
     switch_state = false;
   } else if (action == "getswitch") {
     send_status_report();

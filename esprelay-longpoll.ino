@@ -25,17 +25,19 @@
 #include "web_assets/c++/html_root.h"
 
 // Build version
-#define BUILD "aplha-04.11.2020"
+#define BUILD "aplha-22.11.2020"
 
 bool config_ready;
 bool switch_state = false;
+
+const bool switch_reverse = true;
 
 Ticker timetable_ticker;
 
 /* Configuration */
 
-#define FORCE_CONF_MODE_PIN   D7
-#define RELAY_PIN             D1
+#define FORCE_CONF_MODE_PIN   0
+#define RELAY_PIN             2
 
 #define NTP_SERVER            "ntp1.stratum1.ru"    // Host of the NTP server
 #define NTP_UTC_OFFSET        0                     // GMT +3 default
@@ -87,8 +89,6 @@ void check_timetable() {
   for (int i = 0; i < 50; i++) {
     if (actions_timetable[i].timestamp == NULL) continue;
 
-    Serial.println("record");
-
     int timedelta = time_client.getEpochTime() - actions_timetable[i].timestamp;
 
     Serial.println("====TIMETABLE DEBUG====");
@@ -102,11 +102,16 @@ void check_timetable() {
     
     if ( timedelta >= 0 and timedelta <= actions_timetable[i].timeout ) {
       Serial.println("TIMETABLE: Action!");
+            
+      switch_state = actions_timetable[i].switch_state;
       
       // Toggle switch by action
-      switch_state = actions_timetable[i].switch_state;
-      digitalWrite(RELAY_PIN, switch_state);
-
+      if (switch_reverse){
+        digitalWrite(RELAY_PIN, !switch_state);
+      } else {
+        digitalWrite(RELAY_PIN, switch_state);
+      }
+  
       // Clear completed record
       actions_timetable[i] = {NULL, NULL, NULL};
     }
@@ -150,8 +155,10 @@ void sync_timetable() {
   if (timetable_doc["status"] == "ok") {
 
     // Clear old data
-    actions_timetable[50] = {NULL, NULL, NULL};
-
+    for (int i; i < 50; i++) {
+      actions_timetable[i] = {NULL, NULL, NULL};
+    }
+    
     // Write new timetable data
     for (int i = 0; i < timetable_doc["table"].size(); i++) {
       actions_timetable[i] = {timetable_doc["table"][i][0], timetable_doc["table"][i][1], timetable_doc["table"][i][2]};
@@ -233,24 +240,10 @@ void send_status_report() {
 void setup() {
   // Begin serial
   Serial.begin(115200);
-  // Send a sort of a logo :)
-  Serial.println(
-  "\n\n"
-  "    __ __      __            _     _    ____          __                    \n"
-  "   / //_/___ _/ /_  ______ _(_)___| |  / / /___ _____/ /_________  ____ ___ \n"
-  "  / ,< / __ `/ / / / / __ `/ / __ \\ | / / / __ `/ __  // ___/ __ \\/ __ `__ \\\n"
-  " / /| / /_/ / / /_/ / /_/ / / / / / |/ / / /_/ / /_/ // /__/ /_/ / / / / / /\n"
-  "/_/ |_\\__,_/_/\\__,_/\\__, /_/_/ /_/|___/_/\\__,_/\\__,_(_)___/\\____/_/ /_/ /_/ \n"
-  "                   /____/                                                   "
-  );
-
   Serial.print("\nESP8266 IOT LONGPOLL RELAY\nBuild: ");
   Serial.println(BUILD);
   Serial.println("\n");
 
-  pinMode(RELAY_PIN, OUTPUT);
-  digitalWrite(RELAY_PIN, LOW);
-  
   // Begin EEPROM 
   EEPROM.begin(4096);
 
@@ -285,8 +278,14 @@ void setup() {
     web_srv.begin();
     Serial.println("Web configurator ready!");
   } else {
+      // Setup output pin
+      pinMode(RELAY_PIN, OUTPUT);
+      digitalWrite(RELAY_PIN, switch_reverse);
+
+      // Get access key from config
       StaticJsonDocument<256> iotconf = readWiFiConfig();
       lp_access_key = iotconf["dkey"].as<String>();
+      iotconf.clear();
 
       Serial.print("\nNTP Server: ");
       Serial.println(NTP_SERVER);
@@ -380,10 +379,10 @@ void request_logpoll() {
 // Process actions
 void check_action(String action) {
   if (action == "on") {
-    digitalWrite(RELAY_PIN, HIGH);
+    digitalWrite(RELAY_PIN, !switch_reverse);
     switch_state = true;
   } else if (action == "off") {
-    digitalWrite(RELAY_PIN, LOW);
+    digitalWrite(RELAY_PIN, switch_reverse);
     switch_state = false;
   } else if (action == "getswitch") {
     send_status_report();

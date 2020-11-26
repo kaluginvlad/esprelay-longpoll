@@ -15,7 +15,7 @@ SHELL := '/bin/bash'
 PYTHON_PATH = '/usr/bin/python3'
 #PYTHON_PATH = 'py'
 
-ESP_URL = 'http://esprelay2.iot.minhinlocal'
+ESP_URL = 'http://esprelay.iot.minhinlocal'
 
 ESP_SER = '/dev/ttyUSB0' 
 #ESP_SER = 'COM4' 
@@ -26,7 +26,7 @@ ESP_SER = '/dev/ttyUSB0'
 #ARDUINO_HOME := 'C:\Users\Vladislav Kalugin\Documents\Arduino\'
 
 ## Arduino pathes (Linux/UNIX)
-ARDUINO_PATH := ~/soft/arduino/
+ARDUINO_PATH := ~/soft/arduino-1.8.13/
 ARDUINO_PACK := ~/.arduino15/
 ARDUINO_HOME := ~/Arduino/
 
