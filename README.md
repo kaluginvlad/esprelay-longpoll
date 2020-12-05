@@ -4,13 +4,14 @@
 #### Сделано в рамках курса ИП
 
 ## Dependencies:
-*    Python 3.5 (or higher):
+*    Python 3.8 (or higher):
  *        requests
  *        htmlmin
     
 *    arduino-builder:
  *      ESP8266 board
  *      ArduinoJson
+ *      NTPClient
 
 *    GNU Make
 *    Cygwin (For Windows)
